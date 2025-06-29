@@ -12,11 +12,18 @@ export class UserService {
 
   async listar(): Promise<UserDto[]> {
     const user = await this.userModel.findAll({ raw: true });
-    return user.map((user) => ({ nome: user.nome, id: user.id }));
+    return user.map((user) => ({
+      nome: user.nome,
+      id: user.id,
+    }));
   }
   async remove(id: number): Promise<void> {
     await this.userModel.destroy({
       where: { id: id },
     });
+  }
+
+  async criar(nome: string) {
+    return this.userModel.create({ nome });
   }
 }
