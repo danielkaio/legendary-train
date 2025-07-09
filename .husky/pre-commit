@@ -1,0 +1,2 @@
+npm test
+echo "npm test" > .husky/pre-commit
