@@ -11,7 +11,6 @@ describe('AppController', () => {
         criar: jest.fn(),
       };
 
-
       const appController = new AppController(mockUserService as any);
 
       expect(appController.listar()).toEqual([{ nome: 'John Doe', id: 1 }]);
