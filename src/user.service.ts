@@ -23,7 +23,7 @@ export class UserService {
     });
   }
 
-  async criar(nome: string) {
-    return this.userModel.create({ nome });
+  async criar(name: string) {
+    return this.userModel.create({ name });
   }
 }
