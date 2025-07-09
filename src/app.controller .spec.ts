@@ -1,6 +1,6 @@
-import { AppController } from "./app.controller";
+import { AppController } from './app.controller';
 
-describe('AppController', () => {     
+describe('AppController', () => {
   describe('listar', () => {
     it('should return an array of users', () => {
       // Mock the UserService and its listar method
