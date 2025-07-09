@@ -1,4 +1,4 @@
-export class UserDto {
+export class UseDto {
   nome: string;
   id: number;
 }

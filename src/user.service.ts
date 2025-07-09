@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { User } from './User.entity';
-import { UserDto } from './dto/user.dto';
+import { UseDto } from './dto/user.dto';
 
 @Injectable()
 export class UserService {
@@ -10,7 +10,7 @@ export class UserService {
     private readonly userModel: typeof User,
   ) {}
 
-  async listar(): Promise<UserDto[]> {
+  async listar(): Promise<UseDto[]> {
     const user = await this.userModel.findAll({ raw: true });
     return user.map((user) => ({
       nome: user.nome,
